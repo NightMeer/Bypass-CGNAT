@@ -1,8 +1,10 @@
 # Auf dem VPS:
 
+Update und upgrade auf dem System
 ```
 apt-get update && apt-get upgrade -y
 ```
+PiVPN Installieren
 ```
 curl -L https://install.pivpn.io | bash
 ```
