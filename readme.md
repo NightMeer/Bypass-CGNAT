@@ -20,10 +20,6 @@ Direkt nach "ListenPort" folgende Zeile hinzufügen (bei "dein_interface" den Na
 ```
 PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -t nat -A POSTROUTING -o dein_interface -j MASQUERADE
 ```
-Bei AllowedIPs den Adressbereich des Heimnetzwerks hinzufügen
-```	
-Address = 10.70.193.1/24, 192.168.8.0/24
-```
 reboot
 ```
 pivpn -a
