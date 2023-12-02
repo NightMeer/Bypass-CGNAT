@@ -43,7 +43,6 @@ nano /etc/sysctl.conf
 #net.ipv4.ip_forward = 1
 zu
 net.ipv4.ip_forward = 1
-
 ```
 nano /ip.sh
 ```
@@ -75,34 +74,6 @@ Dort folgendes eintragen:
 ```
 Reboot. Auf dem VPS Ferig.
 # Auf der VM:
-## Docker:
-## Andere Systeme:
-Docker installieren
-```
-curl -fsSL https://get.docker.com -o get-docker.sh && chmod +x get-docker.sh && sh get-docker.sh
-```
-Link zum Docker Repo:
-```
-https://github.com/NightMeer/WireguardClient-Docker  
-```
-Docker run ausführen:
-```
-docker run --restart unless-stopped --privileged -d -v /host/path/config:/config ghcr.io/nightmeer/wireguardclient:latest
-```
-[wg0.conf](https://raw.githubusercontent.com/NightMeer/WireguardClient-Docker/main/wg0.conf) anpassen und in dem Config Ordner ablegen
-Docker neustarten. Fertig.
-## Unraid:
-
-Nach nightmeer/wireguardclient Suchen und installieren
-```
-nightmeer/wireguardclient
-```
-In "/mnt/user/appdata/wireguardclient/" die [wg0.conf](https://raw.githubusercontent.com/NightMeer/WireguardClient-Docker/main/wg0.conf) anpassen und  ablegen.
-```
-wget -O /mnt/user/appdata/wireguardclient/wg0.conf https://raw.githubusercontent.com/NightMeer/WireguardClient-Docker/main/wg0.conf
-```
-Docker neustarten. Fertig.
-## Installieren:
 ```
 apt-get update && apt-get upgrade -y && apt-get install -y wireguard openresolv wireguard-dkms
 ```
