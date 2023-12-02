@@ -16,7 +16,6 @@ Edit wg0.conf file
 ```
 nano /etc/wireguard/wg0.conf
 ```
-```
 Add the following line just after "ListenPort" (replace "your_interface" with the interface name)
 ```
 PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -t nat -A POSTROUTING -o your_interface -j MASQUERADE
